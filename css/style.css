@@ -1,0 +1,130 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+body {
+    margin: 0;
+    background-image: url(../img/fondo.jpg);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4,75px);
+    grid-template-rows: 160px repeat(5,75px);
+    color: #fff;
+    background-color: #FFA9A3;
+    padding: 15px;
+    border-radius: 32px;
+    box-shadow: 15px 10px 0px 5px #00000033;
+}
+
+.button{
+    color: #6e6e6e;
+    cursor: pointer;
+    margin: 5px;
+    padding: 0;
+    border-radius: 32px;
+    font-size: 1.5em;
+    border: none;
+    background-color: #FFA9A3;
+    box-shadow: 5px 5px 10px -3px #00000040, -5px -5px 15px 3px #00ffc11f;
+}
+
+.button:active{
+    background-color: #f87575;
+}
+
+button:focus{
+    outline: none;
+}
+
+.spa-2{
+    grid-column: span 2;
+}
+
+.display{
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    margin: 10px 10px 20px;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #564848;
+    border-radius: 32px;
+    text-align: right;
+    justify-content: space-between;
+    word-break: break-all;
+    box-shadow: 0px 0px 0px 10px #00000033;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+#value-before{
+    font-size: 1.5em;
+}
+
+#value-after{
+    font-size: 1.5em;
+}
+
+/* ---------------------- Dark Mode ---------------------------- */
+
+.dark-mode{
+    margin: 10px 10px 10px 10px;
+}
+
+.dark-mode-button{
+    height: 4em;
+    width: 4em;
+    border-radius: 32px;
+    border: none;
+    color: #ffffff;
+    background-color: #FFA9A3;
+    cursor: pointer;
+    box-shadow: 5px 5px 0px 0px #00000033;
+}
+
+.dark-mode-button:active{
+    background-color: #f87575;
+}
+
+body.dark{
+    background-size: cover;
+    background-image: url(../img/fondodk.jpg);
+}
+
+body.dark .calculator{
+    background-color: #212126;
+    box-shadow: 15px 10px 0px 5px #00000092;
+}
+
+body.dark .button{
+    color: #fff;
+    background-color: #212126;
+    box-shadow: 5px 5px 10px -3px #00000092, -5px -5px 15px 3px #3a3a3a1f;
+}
+
+body.dark .button:active{
+    background-color: #121113;
+}
+
+body.dark .display{
+    background-color: #272227;
+}
+
+body.dark .dark-mode-button{
+    background-color: #212126;
+}
+
+body.dark .dark-mode-button:active{
+    background-color: #121113;
+}
